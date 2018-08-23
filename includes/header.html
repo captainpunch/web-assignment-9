@@ -1,0 +1,57 @@
+<?php 
+if (!isset($page_title)) {
+	$page_title = 'Grant Schorgl';
+}
+?>
+<!--
+	Grant Schorgl
+	<link rel="stylesheet" href="includes/schorgl.css"/>
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title><?php echo $page_title; ?></title>
+
+    <!-- Bootstrap -->
+    <link href="includes/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+<nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.php">Assignment 9</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            
+            <li><a href="register.php">Register</a></li>
+            <li><a href="view_users.php">View Users</a></li>
+			<li><a href="password.php">Change Password</a></li>
+			<li><?php // Create a login/logout link:
+if ( (isset($_COOKIE['user_id'])) && (basename($_SERVER['PHP_SELF']) != 'logout.php') ) {
+	echo '<a href="logout.php">Logout</a>';
+} else {
+	echo '<a href="login.php">Login</a>';
+}
+?></li>
+		
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+<div id="Content">
+<div class="container header">
+	<h1 class="header" align="center" color="#512888">Kansas State Polytechnic</h1>
+</div>
+<div class="container">
